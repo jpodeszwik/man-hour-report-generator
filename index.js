@@ -1,5 +1,5 @@
-const generateDocument = require('./pdf-generator');
-const buildDocumentDefinition = require('./document-definition-builder');
+import { generateDocument } from './pdf-generator';
+import { buildDocumentDefinition } from './document-definition-builder';
 
 exports.handler = async event => {
 	if (event.body === null && event.body === undefined) {

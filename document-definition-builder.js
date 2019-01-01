@@ -29,7 +29,7 @@ const buildBody = input => {
   );
 };
 
-const buildDocumentDefinition = input => {
+export const buildDocumentDefinition = input => {
   return {
     content: [
       {
@@ -58,5 +58,3 @@ const buildDocumentDefinition = input => {
     }
   };
 };
-
-module.exports = buildDocumentDefinition;

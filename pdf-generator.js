@@ -1,17 +1,18 @@
-const PdfPrinter = require('pdfmake');
+import dejaVuSans from 'dejavu-fonts-ttf/ttf/DejaVuSans.ttf';
+import dejaVuSansBold from 'dejavu-fonts-ttf/ttf/DejaVuSans-Bold.ttf';
 const base64 = require('base64-stream');
+const PdfPrinter = require('pdfmake');
 
 const fonts = {
   DejaVuSans: {
-    normal: 'node_modules/dejavu-fonts-ttf/ttf/DejaVuSans.ttf',
-    bold: 'node_modules/dejavu-fonts-ttf/ttf/DejaVuSans-Bold.ttf',
+    normal: dejaVuSans,
+    bold: dejaVuSansBold,
   },
 };
 
-const printer = new PdfPrinter(fonts);
-
-const generateDocument = (documentDefinition) => {
+export const generateDocument = (documentDefinition) => {
   return new Promise(function (resolve) {
+    const printer = new PdfPrinter(fonts);
     const pdfDoc = printer.createPdfKitDocument(documentDefinition);
     const stream = new base64.Base64Encode();
 
@@ -29,5 +30,3 @@ const generateDocument = (documentDefinition) => {
     });
   });
 };
-
-module.exports = generateDocument;
