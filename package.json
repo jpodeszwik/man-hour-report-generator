@@ -1,0 +1,12 @@
+{
+  "name": "working-hours-report",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "base64-stream": "^1.0.0",
+    "dejavu-fonts-ttf": "^2.37.3",
+    "pdfkit": "^0.8.3",
+    "pdfmake": "^0.1.40"
+  }
+}
