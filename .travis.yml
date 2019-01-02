@@ -1,7 +1,18 @@
 language: node_js
 node_js:
-- 'lts/*'
+- lts/*
 script:
 - yarn install
 - webpack
-
+deploy:
+  provider: lambda
+  function_name: man-hour-report-generator
+  region: eu-central-1
+  role: arn:aws:iam::020967843968:role/lambda_basic_execution
+  runtime: nodejs8.10
+  timeout: 60
+  handler_name: handler
+  zip: dist
+  skip_cleanup: true
+  access_key_id: $ACCESS_KEY_ID
+  secret_access_key: $SECRET_ACCESS_KEY
