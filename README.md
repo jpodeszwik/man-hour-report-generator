@@ -11,12 +11,11 @@ Install dependencies first:
 
 Then run webpack
 
-```webpack```
+```yarn build```
 
 ## Run locally
-first build, and then run
 
-```node local-run.js```
+```yarn local-run```
 
 ## Deploy
 Copy contents of dist directory into amazon lambda function code

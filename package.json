@@ -15,5 +15,9 @@
     "transform-loader": "^0.2.4",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "build" : "webpack",
+    "local-run": "yarn build && node local-run.js"
   }
 }
