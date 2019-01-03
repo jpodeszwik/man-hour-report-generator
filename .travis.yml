@@ -3,7 +3,7 @@ node_js:
 - lts/*
 script:
 - yarn install
-- webpack
+- yarn build
 deploy:
   provider: lambda
   function_name: man-hour-report-generator
