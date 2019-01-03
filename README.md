@@ -1,6 +1,7 @@
 # Man hour report generator
 [![Build Status](https://travis-ci.org/jpodeszwik/man-hour-report-generator.svg?branch=master)](https://travis-ci.org/jpodeszwik/man-hour-report-generator)
 [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/jpodeszwik/man-hour-report-generator/blob/master/LICENSE)
+
 Amazon lambda function that generates working hours reports.
 
 ## Build
